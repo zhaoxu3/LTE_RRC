@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/bootstrp.css'%}">
+        <title>AP_ie_inf_webShow</title>
+    </head>
+    <body>
+    <table border="1">
+        <thead>
+        <tr>
+            <td>ie_data_id</td>
+            <td>ap_name</td>
+            <td>phy_type</td>
+            <td>ie_beacon</td>
+            <td>ie_probe</td>
+            <td>ie_auth</td>
+            <td>ie_assoc</td>
+        </tr>
+        </thead>
+        {%for line in form%}
+            <tr>
+                <td>{{line.ie_data_id}}</td>
+                <td>{{line.ap_name}}</td>
+                <td>{{line.phy_type}}</td>
+                <td>{{line.ie_beacon}}</td>
+                <td>{{line.ie_probe}}</td>
+                <td>{{line.ie_auth}}</td>
+                <td>{{line.ie_assoc}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    </body>
+</html>
