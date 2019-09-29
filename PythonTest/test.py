@@ -1,3 +1,4 @@
+#include <stafdasgs>
 list =[{"id",12},{"name","zhaoxu"}]
 dict={"a":"dfg",
       "ie":list
